@@ -1,0 +1,10 @@
+.col {
+    border: 1px solid black;
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+}
+
+/*div.col:hover {
+    background-color: red;
+}*/
