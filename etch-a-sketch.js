@@ -4,9 +4,11 @@ const button = document.querySelectorAll('button');
 let row = document.getElementsByClassName("row");
 let col = document.getElementsByClassName("col");
 
-function grid() {
-    makeRows(16);
-    makeColumns(16);
+let value = 16;
+
+function grid(value) {
+    makeRows(value);
+    makeColumns(value);
 }
 
 function makeRows(rowNum) {
@@ -45,7 +47,7 @@ clear.addEventListener('click', function() {
     window.location.reload();
 })
 
-grid();
+grid(25);
 
 /*function grid() {
     let container = document.createElement('div');
