@@ -1,8 +1,12 @@
 .col {
     border: 1px solid black;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 15px;
+    min-height: 15px;
     display: inline-block;
+}
+
+#container {
+    width: 1130px;
 }
 
 /*div.col:hover {

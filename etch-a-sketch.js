@@ -6,6 +6,8 @@ let col = document.getElementsByClassName("col");
 
 let value = 16;
 
+grid(value);
+
 function grid(value) {
     makeRows(value);
     makeColumns(value);
@@ -28,6 +30,7 @@ function makeColumns(colNum) {
     };
 };
 
+
 // Changes the background color 
 function changeColor (target) {
     target.style.backgroundColor = "red";
@@ -41,13 +44,21 @@ container.addEventListener("mouseover", function (e) {
     }
 });
 
-// Removes the background color
+// Prompts user for a new grid size
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', function() {
-    window.location.reload();
+    let newSize = window.prompt("Choose a new grid size");
+    if (newSize == 50) {
+        //windows.location.reload();
+        makeRows(newSize);
+        makeColumns(newSize);
+        grid(newSize);
+    }
+    //window.location.reload();
+    //value = newSize;
+    //makeRows(value);
+    //makeColumns(value);
 })
-
-grid(25);
 
 /*function grid() {
     let container = document.createElement('div');
