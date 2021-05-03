@@ -1,16 +1,31 @@
+h1 {
+    color: rgba(109, 36, 36, 0.699);
+}
+
 .col {
-    border: 1px solid black;
-    min-width: 15px;
-    min-height: 15px;
-    flex: 1;
-    /*display: inline-block;*/
+    border: 1px solid rgba(109, 36, 36, 0.699);
+    min-width: 10px;
+    min-height: 10px;
+    display: inline-block;
 }
 
 #container {
-    width: 1130px;
-    display: flex;
+    display: grid;
+    justify-content: center;
+    margin: auto;
 }
 
-/*div.col:hover {
-    background-color: red;
-}*/
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(230, 216, 199);
+    color: rgba(109, 36, 36, 0.699);
+    border-style: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+}

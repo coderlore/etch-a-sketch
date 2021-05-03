@@ -6,8 +6,15 @@ let col = document.getElementsByClassName("col");
 
 let value = 16;
 
-grid(value);
-
+function newGrid() {
+    value = parseInt(window.prompt("Choose a new grid size (between 2 and 64)"));
+    if (value >= 2 && value <= 64) {
+        grid(value);
+    } else {
+        alert('Enter a valid number. Refresh the browser to try again.');
+    }
+}
+newGrid();
 function grid(value) {
     makeRows(value);
     makeColumns(value);
@@ -41,7 +48,7 @@ function resetColor(divs) {
 
 // Changes the background color 
 function changeColor (target) {
-    target.style.backgroundColor = "red";
+    target.style.backgroundColor = "rgba(109, 36, 36, 0.699)";
 }
 
 container.addEventListener("mouseover", function (e) {
@@ -55,36 +62,18 @@ container.addEventListener("mouseover", function (e) {
 // Prompts user for a new grid size
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', function() {
-    resetColor(target);
-    let newSize = window.prompt("Choose a new grid size");
-    if (newSize == 20) {
+    //resetColor(target);
+    window.location.reload();
+    //let newSize = window.prompt("Choose a new grid size");
+    /*if (newSize == 20) {
+        //makeGrid (newSize,newSize);
         //windows.location.reload();
         //makeRows(newSize);
         //makeColumns(newSize);
-        grid(newSize);
-    }
+        //grid(newSize);
+    }*/
     //window.location.reload();
     //value = newSize;
     //makeRows(value);
     //makeColumns(value);
 })
-
-/*function grid() {
-    let container = document.createElement('div');
-    container.id = "main";
-    container.className = "container";
-
-    for (let i = 0; i < 16; i++) {
-        let row = document.createElement('div');
-        row.className = "row";
-        row.id = "row" + 1;
-
-        for (let j = 0; j < 16; j++) {
-            let box = document.createElement('div');
-            box.className = 'box';
-            row.appendChild(box);
-        }
-        container.appendChild(row);
-    }
-    return container;
-}*/
