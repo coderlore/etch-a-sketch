@@ -37,15 +37,6 @@ function makeColumns(colNum) {
     };
 };
 
-// Resets the color back to white 
-function resetColor(divs) {
-    divs = document.querySelectorAll('div');
-    for (i = 0; i < divs.length; i++) {
-        let multipleDivs = divs[i];
-        multipleDivs.style.backgroundColor = "white";
-    }
-}
-
 // Changes the background color 
 function changeColor (target) {
     target.style.backgroundColor = "rgba(109, 36, 36, 0.699)";
@@ -62,18 +53,5 @@ container.addEventListener("mouseover", function (e) {
 // Prompts user for a new grid size
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', function() {
-    //resetColor(target);
     window.location.reload();
-    //let newSize = window.prompt("Choose a new grid size");
-    /*if (newSize == 20) {
-        //makeGrid (newSize,newSize);
-        //windows.location.reload();
-        //makeRows(newSize);
-        //makeColumns(newSize);
-        //grid(newSize);
-    }*/
-    //window.location.reload();
-    //value = newSize;
-    //makeRows(value);
-    //makeColumns(value);
 })
